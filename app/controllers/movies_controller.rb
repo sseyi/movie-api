@@ -1,4 +1,4 @@
-class MoviesController < ApplicationController
+class MoviesController < OpenReadController
   before_action :set_movie, only: [:show, :update, :destroy]
 
   # GET /movies
