@@ -1,5 +1,9 @@
 "Seen It" (Movie Client Application)
-This application was designed by, Seyi Solanke as the final capstone project at General Assembly. This single page movie-client application is called "Seen It". It provides an index of movies that allows the users to search *( fill more content)*
+https://sseyi.github.io/movie-client/#/
+
+![seenit](https://media.git.generalassemb.ly/user/16959/files/0777ce80-2077-11e9-9037-5e8ff346d828)
+
+This application was designed by, Seyi Solanke as the final capstone project at General Assembly. This single page movie-client application is called "Seen It". It provides an index allows the user movies they have seen by title, year & director. The movie inex can also be update & deleted.
 
 Installation
 This application utilizes a Ruby on Rails API template provided by General Assembly.
@@ -8,20 +12,18 @@ The RailsAPI is required to create a database for the application's backend.
 
 On sign-up, a user has the ability to register with their email &  password. Without authentication, the user will be unable to sign-in to gain access to the application. 
 
-On sign-in, a user will be able to sign-in with their email & password. Upon successful sign in the user will be able to see a list of movies ****(  FILL IN MORE CONTENT     )****
+On sign-in, a user will be able to sign-in with their email & password. Upon successful sign in the user will be able to  access the nav bar to navigate the application & utilizing the following features:
 
-The User: Users will be able to search movie listing will be provided an index with the following: keys "Title", "Director", & "Year". A user will be able to update delete and view their own listings as well.
+The User: Users will be able to search movie listing will be provided an index with the following: keys "Title", "Director", & "Year". A user will be able to update, delete their own movie entries. In addition to viewing their own entries as well as the movie entries of other users.
 
 Users are allowed to do all authenticated actions such as sign in, sign up, change password, and sign out A User can also perform different CRUD actions referenced by different models in the backend.
 
 The API consists of the following tables:
 
-the Movie model requires: -title -director -year
+1. Users & Identification Key
+2.the Movie model requires: -title -director -year
 
-*(.  INSERT POTENTIALLY MORE MODELS >)*
-
-Diagram*(. INSERT ERD HERE>
- 
+[erd.pdf](https://git.generalassemb.ly/ga-wdi-boston/capstone-project/files/1710/erd.pdf)
 
 Movie Routes: 
 
