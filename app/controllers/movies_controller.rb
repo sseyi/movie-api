@@ -1,7 +1,8 @@
 class MoviesController < OpenReadController
-  before_action :set_movie, only: [:show, :update, :destroy]
+  before_action :set_movie, only: %i[update destroy]
 
   # GET /movies
+
   def index
     @movies = Movie.all
 
@@ -10,12 +11,12 @@ class MoviesController < OpenReadController
 
   # GET /movies/1
   def show
-    render json: @movie
+    render json: Movie.find(params[:id])
   end
 
   # POST /movies
   def create
-    @movie = Movie.new(movie_params)
+    @movie = current_user.movies.build(movie_params)
 
     if @movie.save
       render json: @movie, status: :created, location: @movie
@@ -41,7 +42,7 @@ class MoviesController < OpenReadController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_movie
-      @movie = Movie.find(params[:id])
+      @movie = current_user.movies.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
